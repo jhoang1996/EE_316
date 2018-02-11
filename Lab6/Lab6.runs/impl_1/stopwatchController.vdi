@@ -1,0 +1,53 @@
+#-----------------------------------------------------------
+# Vivado v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Wed Nov 29 17:58:22 2017
+# Process ID: 7156
+# Current directory: C:/Users/Justin/Lab6/Lab6.runs/impl_1
+# Command line: vivado.exe -log stopwatchController.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source stopwatchController.tcl -notrace
+# Log file: C:/Users/Justin/Lab6/Lab6.runs/impl_1/stopwatchController.vdi
+# Journal file: C:/Users/Justin/Lab6/Lab6.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source stopwatchController.tcl -notrace
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Netlist 29-17] Analyzing 39 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2017.2
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [C:/Users/Justin/Lab6/Lab6.srcs/constrs_1/imports/Desktop/Basys3_Master.xdc]
+Finished Parsing XDC File [C:/Users/Justin/Lab6/Lab6.srcs/constrs_1/imports/Desktop/Basys3_Master.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+link_design: Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 479.930 ; gain = 257.566
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a35t-cpg236'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a35t-cpg236'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+Command: report_drc (run_mandatory_drcs) for: opt_checks
+INFO: [DRC 23-27] Running DRC with 2 threads
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net counter1/minute/Q[0] has multiple drivers: counter1/lsdig_second/cnt_reg[0]/Q, and counter1/minute/cnt_reg[0]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net counter1/minute/Q[1] has multiple drivers: counter1/lsdig_second/cnt_reg[1]/Q, and counter1/minute/cnt_reg[1]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net counter1/minute/Q[2] has multiple drivers: counter1/lsdig_second/cnt_reg[2]/Q, and counter1/minute/cnt_reg[2]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net counter1/minute/Q[3] has multiple drivers: counter1/lsdig_second/cnt_reg[3]/Q, and counter1/minute/cnt_reg[3]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net counter1/tenth/mbken has multiple drivers: counter1/msdig_second/cnt[3]_i_6/O, and counter1/tenth/cnt[3]_i_5__0/O.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net counter1/tenth/mupen has multiple drivers: counter1/msdig_second/cnt[3]_i_4__0/O, and counter1/tenth/cnt[3]_i_3__0/O.
+WARNING: [DRC HPDR-1] Port direction inconsistency: Hierarchical port counter1/msdig_second/mbken direction INPUT is not consistent with the directions of the cell pins found at that level of the netlist hierarchy. Please review the design and consider changing the port direction. No other driver was expected for the net (counter1/msdig_second/mbken) connected to this Port, but at least one was found.
+WARNING: [DRC HPDR-1] Port direction inconsistency: Hierarchical port counter1/msdig_second/mupen direction INPUT is not consistent with the directions of the cell pins found at that level of the netlist hierarchy. Please review the design and consider changing the port direction. No other driver was expected for the net (counter1/msdig_second/mupen) connected to this Port, but at least one was found.
+report_drc (run_mandatory_drcs) completed successfully
+INFO: [Project 1-461] DRC finished with 6 Errors, 2 Warnings
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+ERROR: [Vivado_Tcl 4-78] Error(s) found during DRC. Opt_design not run.
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.727 . Memory (MB): peak = 486.566 ; gain = 6.637
+11 Infos, 2 Warnings, 0 Critical Warnings and 7 Errors encountered.
+opt_design failed
+ERROR: [Common 17-39] 'opt_design' failed due to earlier errors.
+
+INFO: [Common 17-206] Exiting Vivado at Wed Nov 29 17:58:36 2017...
